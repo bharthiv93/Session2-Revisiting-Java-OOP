@@ -1,19 +1,85 @@
-//enhanced for loop to traverse/iterate the array and print its elements.
-public class Main
-{
-    public static void main(String[] args) {
-        //declare and initialize a string array
-        String[] numArray = {"one","two", "three", "four", "five"};
-        System.out.println("String Array elements displayed using for loop:");
-        // for loop to iterate over the string array
-        for(int i=0; i<numArray.length;i++)
-            System.out.print(numArray[i] + " ");
-     
-        System.out.println("\n");
-     
-        System.out.println("String Array elements displayed using enhanced for loop:");
-        //enhanced for loop to iterate over the string array
-        for(String val:numArray)
-            System.out.print(val + " ");
-    }
+public class MultiDimensionalArray{
+
+/**Program For MultiDimensional Array in java
+
+* @param args
+
+*/
+
+public static void main(String[] args) {
+
+int[][] twoDimensionalArray= new int[2][3];
+int[][] twoDArray=new int[2][];
+twoDArray[0]=new int[2];
+twoDArray[1]=new int[2];
+twoDArray[0][0]=1;
+twoDArray[0][1]=2;
+twoDArray[1][0]=4;
+twoDArray[1][1]=5;
+
+String[][] str={{"Hello","Mr"},{"How","You"}};
+String[][] str1= new String[2][2];
+
+str1[0][0]="Hello";
+str1[0][1]="Mr";
+str1[1][0]="How";
+str1[1][1]="You";
+
+System.out.println("The Result for twodimenionalarray is:");
+
+twoDimensionalArray[0][0]=0;
+
+for(int i=0;i<2;i++){
+for(int j=0; j<3; j++){
+twoDimensionalArray[i][j]=i+j;
+System.out.print(+twoDimensionalArray[i][j]);
+System.out.print("\t");
+
+}
+
+System.out.print("\n");
+
+}
+
+System.out.println("The Result for twoDArray is:");
+
+for(int i=0;i<2;i++){
+for(int j=0; j<2; j++){
+System.out.print(twoDArray[i][j]);
+System.out.print("\t");
+
+}
+
+System.out.print("\n");
+
+}
+
+System.out.println("The Result for String Array is:");
+
+for(int i=0;i<2;i++){
+for(int j=0; j<2; j++){
+System.out.print(str[i][j]);
+System.out.print("\t");
+}
+
+System.out.print("\n");
+
+}
+
+System.out.println("The Result for String Array by initializing in different way is:");
+
+for(int i=0;i<2;i++){
+for(int j=0; j<2; j++){
+
+System.out.print(str[i][j]);
+System.out.print("\t");
+
+}
+
+System.out.print("\n");
+
+}
+
+}
+
 }
